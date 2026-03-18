@@ -2,7 +2,7 @@
 title: "From Industry to Academia — A Bioinformatician's Journey"
 date: 2026-03-01
 draft: false
-tags: ["career", "bioinformatics", "reflection"]
+tags: ["Musings", "career", "bioinformatics", "reflection"]
 summary: "Reflections on transitioning from pharmaceutical R&D in Shanghai to doctoral research at King's College London."
 showToc: true
 ---

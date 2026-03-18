@@ -2,7 +2,7 @@
 title: "The Hidden Language of Single Cells"
 date: 2026-03-15
 draft: false
-tags: ["single-cell", "RNA-seq", "bioinformatics"]
+tags: ["Research", "single-cell", "RNA-seq", "bioinformatics"]
 summary: "What single-cell transcriptomics reveals about the heterogeneity hiding inside seemingly uniform tissues — and why it matters for cancer research."
 showToc: true
 ---
