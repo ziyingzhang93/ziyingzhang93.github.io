@@ -2,7 +2,8 @@ baseURL = 'https://ziyingzhang93.github.io/'
 languageCode = 'en-us'
 title = 'Ziying Zhang'
 theme = 'PaperMod'
-paginate = 5
+[pagination]
+  pagerSize = 5
 
 enableRobotsTXT = true
 buildDrafts = false
