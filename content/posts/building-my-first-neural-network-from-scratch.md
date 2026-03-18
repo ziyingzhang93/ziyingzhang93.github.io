@@ -2,7 +2,7 @@
 title: "Visualizing Cancer — The Art of Biological Data"
 date: 2026-02-15
 draft: false
-tags: ["Research", "visualization", "cancer", "data science"]
+tags: ["Study", "visualization", "cancer", "data science"]
 summary: "How thoughtful data visualization transforms complex genomic datasets into stories that move research forward."
 showToc: true
 ---
