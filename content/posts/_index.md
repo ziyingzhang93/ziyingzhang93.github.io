@@ -1,7 +1,6 @@
 ---
-menu:
-  after:
-    name: blog
-    weight: 5
-title: Blog
+title: "Blog"
+layout: "posts"
+url: "/posts/"
+summary: "Thoughts on data, algorithms, and the patterns in between"
 ---

@@ -1,0 +1,403 @@
+/* ============================================================
+   Natural Sage — Warm & Soft Academic Portfolio
+   Earthy sage green, warm beige, organic minimalism
+   ============================================================ */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ---------- Light Mode ---------- */
+:root {
+  --primary-color: #3d5a47;
+  --accent-color: #7a9e7e;
+  --accent-hover: #6a8e6e;
+  --accent2: #b8a88a;
+  --bg-primary: #f5f2ec;
+  --bg-secondary: #ece8df;
+  --bg-card: #faf8f4;
+  --text-primary: #4a4a42;
+  --text-secondary: #8a8a7a;
+  --border-color: #ddd8cc;
+  --code-bg: #eee9e0;
+  --shadow-sm: 0 2px 8px rgba(61, 90, 71, 0.05);
+  --shadow-md: 0 6px 24px rgba(61, 90, 71, 0.09);
+  --shadow-lg: 0 12px 36px rgba(61, 90, 71, 0.12);
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ---------- Dark Mode ---------- */
+.dark {
+  --primary-color: #a8c4ac;
+  --accent-color: #8fb593;
+  --accent-hover: #a0c8a4;
+  --accent2: #c8b89a;
+  --bg-primary: #2a2e28;
+  --bg-secondary: #343830;
+  --bg-card: #32362e;
+  --text-primary: #ddd8ce;
+  --text-secondary: #9a9a8a;
+  --border-color: #454a40;
+  --code-bg: #262a24;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Override PaperMod theme vars ---------- */
+body {
+  --theme: var(--bg-primary);
+  --entry: var(--bg-card);
+  --primary: var(--text-primary);
+  --secondary: var(--text-secondary);
+  --tertiary: var(--border-color);
+  --content: var(--text-primary);
+  --code-bg: var(--code-bg);
+  --border: var(--border-color);
+}
+.dark body, body.dark {
+  --theme: var(--bg-primary);
+  --entry: var(--bg-card);
+  --primary: var(--text-primary);
+  --secondary: var(--text-secondary);
+  --tertiary: var(--border-color);
+  --content: var(--text-primary);
+  --border: var(--border-color);
+}
+
+/* ---------- Global Foundation ---------- */
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Header / Navigation ---------- */
+.nav {
+  border-bottom: 1px solid var(--border-color) !important;
+  backdrop-filter: blur(12px);
+  background: rgba(245, 242, 236, 0.9) !important;
+}
+.dark .nav {
+  background: rgba(42, 46, 40, 0.9) !important;
+}
+
+header .logo a {
+  font-family: var(--font-display) !important;
+  font-size: 1.4rem !important;
+  color: var(--primary-color) !important;
+}
+
+#menu a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+#menu a:hover,
+#menu a.active {
+  color: var(--primary-color) !important;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* ---------- Profile / Hero ---------- */
+.profile_inner {
+  padding: 3.5rem 0;
+}
+
+.profile_inner h1 {
+  font-family: var(--font-display) !important;
+  font-size: 3rem !important;
+  color: var(--primary-color) !important;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.profile_inner .tagline,
+.profile_inner h2 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Profile buttons — clean square style */
+.profile_inner a {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding: 0.6rem 1.8rem !important;
+  border: 1.5px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  transition: all 0.35s ease !important;
+}
+.profile_inner a:hover {
+  background: var(--primary-color) !important;
+  color: var(--bg-primary) !important;
+  box-shadow: 0 4px 16px rgba(61, 90, 71, 0.2) !important;
+}
+
+/* Social icons */
+.social-icons a {
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--primary-color);
+  line-height: 1.3;
+}
+
+.post-title {
+  font-family: var(--font-display) !important;
+  font-size: 2.4rem;
+  color: var(--primary-color);
+}
+
+.post-content h2 {
+  font-size: 1.7rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+}
+.post-content h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: var(--accent-color);
+  margin-top: 0.4rem;
+  border-radius: 1px;
+}
+
+.post-content h3 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  color: var(--accent2);
+}
+
+/* ---------- Body Text ---------- */
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+.post-content p {
+  margin-bottom: 1.4rem;
+}
+.post-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ---------- Links ---------- */
+.post-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent-color);
+  transition: all 0.3s;
+}
+.post-content a:hover {
+  border-bottom-style: solid;
+}
+
+/* ---------- Post Cards — Borderless, minimal ---------- */
+.post-entry {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 1.4rem 0;
+  background: transparent;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+.post-entry:hover {
+  padding-left: 0.8rem;
+  box-shadow: none;
+  transform: none;
+}
+.post-entry .entry-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+.post-entry:hover .entry-header h2 {
+  color: var(--accent-color);
+}
+.post-entry .entry-content {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+/* ---------- Code ---------- */
+.post-content code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+}
+.post-content pre {
+  background: var(--code-bg) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.2rem;
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+.post-content pre code {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--text-primary);
+}
+.highlight pre {
+  background: var(--code-bg) !important;
+}
+
+/* ---------- Blockquote ---------- */
+.post-content blockquote {
+  border-left: 2px solid var(--accent-color);
+  padding: 0.8rem 1.4rem;
+  margin: 1.5rem 0;
+  background: var(--bg-secondary);
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* ---------- HR ---------- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+/* ---------- Tags ---------- */
+.post-tags a {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  color: var(--text-secondary);
+  transition: all 0.3s;
+}
+.post-tags a:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* ---------- TOC ---------- */
+.toc {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem 1.4rem;
+  background: var(--bg-secondary);
+}
+.toc details summary {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ---------- Breadcrumbs ---------- */
+.breadcrumbs {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.breadcrumbs a {
+  color: var(--accent-color);
+}
+
+/* ---------- Header decoration ---------- */
+.post-header::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: var(--accent-color);
+  margin-top: 1rem;
+  border-radius: 1px;
+}
+
+/* ---------- CV page — timeline border ---------- */
+.post-content h3 {
+  padding-left: 0;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: rgba(122, 158, 126, 0.2);
+  color: var(--text-primary);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
+
+/* ---------- Theme toggle ---------- */
+#theme-toggle {
+  color: var(--text-secondary);
+}
+#theme-toggle:hover {
+  color: var(--accent-color);
+}
+
+/* ---------- Transitions ---------- */
+a, button, .post-entry, #theme-toggle {
+  transition: all 0.3s ease;
+}
+
+/* ---------- Lists (CV etc.) ---------- */
+.post-content ul li {
+  padding-left: 0.3rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .profile_inner h1 { font-size: 2.2rem !important; }
+  .post-title { font-size: 1.8rem; }
+  .post-content { font-size: 1rem; }
+}

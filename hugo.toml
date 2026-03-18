@@ -1,5 +1,135 @@
-baseURL = 'http://ziyingzhang93.github.io/'
+baseURL = 'https://ziyingzhang93.github.io/'
 languageCode = 'en-us'
 title = 'Ziying Zhang'
-BookSection = 'docs'
-theme = 'hugo-book'
+theme = 'PaperMod'
+paginate = 5
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "Ziying Zhang"
+  description = "PhD Researcher in Cancer & Pharmaceutical Sciences — Bioinformatics, Computational Biology, and the Art of Discovery"
+  keywords = ["Bioinformatics", "Cancer Research", "Computational Biology", "Single-cell Sequencing", "Data Science"]
+  author = "Ziying Zhang"
+  defaultTheme = "light"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+  math = true
+
+  [params.assets]
+    disableHLJS = true
+
+  [params.label]
+    text = "ZZ"
+    iconHeight = 35
+
+  [params.profileMode]
+    enabled = true
+    title = "Ziying Zhang"
+    subtitle = "PhD Researcher · Bioinformatician · Explorer of Molecular Landscapes\n\nDecoding the language of cancer through computational biology,\nsingle-cell genomics, and the art of data-driven discovery."
+    imageUrl = ""
+    imageWidth = 160
+    imageHeight = 160
+
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "/cv/"
+
+    [[params.profileMode.buttons]]
+      name = "Research"
+      url = "/projects/"
+
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/posts/"
+
+  [params.homeInfoParams]
+    Title = "Ziying Zhang"
+    Content = "PhD Researcher · Bioinformatician"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/ziyingzhang93"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:ziyingzhang93@gmail.com"
+
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = true
+
+  [params.editPost]
+    disabled = true
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "dracula"
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  identifier = "cv"
+  name = "CV"
+  url = "/cv/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "research"
+  name = "Research"
+  url = "/projects/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/posts/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 40
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
