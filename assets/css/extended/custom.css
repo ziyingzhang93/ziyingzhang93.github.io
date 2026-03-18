@@ -490,71 +490,25 @@ a, button, .post-entry, #theme-toggle {
   border-color: rgba(176, 142, 176, 0.3);
 }
 
-/* ---------- Visitor Map Card ---------- */
+/* ---------- Visitor Map ---------- */
 .visitor-map-section {
   display: flex;
   justify-content: center;
-  padding: 2rem 0 0.5rem;
-}
-.visitor-map-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.2rem 1.6rem 1rem;
-  max-width: 200px;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.3s ease;
-}
-.visitor-map-card:hover {
-  box-shadow: var(--shadow-md);
-}
-.visitor-map-header {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-bottom: 0.8rem;
-}
-.visitor-map-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-color);
-  display: inline-block;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(122, 158, 126, 0.4); }
-  50% { opacity: 0.7; box-shadow: 0 0 0 4px rgba(122, 158, 126, 0); }
-}
-.visitor-map-label {
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
+  padding: 1.5rem 0 0.5rem;
 }
 .visitor-map-globe {
-  width: 150px;
-  height: 150px;
+  width: 380px;
+  height: 380px;
   overflow: hidden;
-  border-radius: 8px;
   position: relative;
 }
 .visitor-map-inner {
-  transform: scale(0.38);
+  transform: scale(0.95);
   transform-origin: top left;
   width: 400px;
   position: absolute;
   top: 0;
   left: 0;
-}
-.visitor-map-globe img,
-.visitor-map-globe canvas {
-  border-radius: 8px;
 }
 
 /* ---------- Responsive ---------- */
