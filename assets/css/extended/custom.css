@@ -490,6 +490,13 @@ a, button, .post-entry, #theme-toggle {
   border-color: rgba(176, 142, 176, 0.3);
 }
 
+/* ---------- ClustrMaps Globe ---------- */
+.clustrmaps-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 0.5rem;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .profile_inner h1 { font-size: 2.2rem !important; }
