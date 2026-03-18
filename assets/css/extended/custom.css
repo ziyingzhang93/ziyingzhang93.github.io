@@ -395,6 +395,101 @@ a, button, .post-entry, #theme-toggle {
   color: var(--text-secondary);
 }
 
+/* ---------- Blog Category Filter Bar ---------- */
+.blog-categories {
+  display: flex;
+  gap: 0.6rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+.cat-pill {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1.5px solid var(--border-color);
+  color: var(--text-secondary);
+  background: transparent;
+}
+.cat-pill:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.cat-pill.cat-active {
+  background: var(--primary-color);
+  color: var(--bg-primary);
+  border-color: var(--primary-color);
+}
+
+/* Category-specific colors */
+.cat-pill.cat-study { border-color: #5b8a72; color: #5b8a72; }
+.cat-pill.cat-study:hover, .cat-pill.cat-study.cat-active { background: #5b8a72; color: #fff; border-color: #5b8a72; }
+.cat-pill.cat-travel { border-color: #b8860b; color: #b8860b; }
+.cat-pill.cat-travel:hover, .cat-pill.cat-travel.cat-active { background: #b8860b; color: #fff; border-color: #b8860b; }
+.cat-pill.cat-musings { border-color: #8b6e8b; color: #8b6e8b; }
+.cat-pill.cat-musings:hover, .cat-pill.cat-musings.cat-active { background: #8b6e8b; color: #fff; border-color: #8b6e8b; }
+
+/* Dark mode pill adjustments */
+.dark .cat-pill.cat-study { border-color: #7aad8e; color: #7aad8e; }
+.dark .cat-pill.cat-study:hover, .dark .cat-pill.cat-study.cat-active { background: #7aad8e; color: #1a1a1a; }
+.dark .cat-pill.cat-travel { border-color: #d4a843; color: #d4a843; }
+.dark .cat-pill.cat-travel:hover, .dark .cat-pill.cat-travel.cat-active { background: #d4a843; color: #1a1a1a; }
+.dark .cat-pill.cat-musings { border-color: #b08eb0; color: #b08eb0; }
+.dark .cat-pill.cat-musings:hover, .dark .cat-pill.cat-musings.cat-active { background: #b08eb0; color: #1a1a1a; }
+
+/* ---------- Category Badges on Post Cards ---------- */
+.entry-tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+}
+.cat-badge {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.6rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+.cat-badge.cat-study {
+  background: rgba(91, 138, 114, 0.12);
+  color: #5b8a72;
+  border: 1px solid rgba(91, 138, 114, 0.3);
+}
+.cat-badge.cat-travel {
+  background: rgba(184, 134, 11, 0.1);
+  color: #b8860b;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+}
+.cat-badge.cat-musings {
+  background: rgba(139, 110, 139, 0.1);
+  color: #8b6e8b;
+  border: 1px solid rgba(139, 110, 139, 0.3);
+}
+.dark .cat-badge.cat-study {
+  background: rgba(122, 173, 142, 0.15);
+  color: #7aad8e;
+  border-color: rgba(122, 173, 142, 0.3);
+}
+.dark .cat-badge.cat-travel {
+  background: rgba(212, 168, 67, 0.15);
+  color: #d4a843;
+  border-color: rgba(212, 168, 67, 0.3);
+}
+.dark .cat-badge.cat-musings {
+  background: rgba(176, 142, 176, 0.15);
+  color: #b08eb0;
+  border-color: rgba(176, 142, 176, 0.3);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .profile_inner h1 { font-size: 2.2rem !important; }
